@@ -15,5 +15,5 @@ if __name__ == "__main__":
     # We must listen on 0.0.0.0 so the global internet can find the service.
     port = int(os.getenv("PORT", 8000))
     
-    # CRUCIAL: force transport to "streamable-http" or "sse"
-    mcp.run(transport="streamable-http", host="0.0.0.0", port=port)
+    # FIX: Changed "streamable-http" to "http"
+    mcp.run(transport="http", host="0.0.0.0", port=port)
